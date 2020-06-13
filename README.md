@@ -25,7 +25,7 @@ My solutions to the excercises in the book 'The C Programming Language'
 * [1.21](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/1_21.c)
 * [1.22](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/1_22.c)
 * [1.23](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/1_23.c)
-* [1.24](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/1_20.c) TODO
+* [1.24](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/1_24.c) TODO
 
 # Chapter 2
 
