@@ -36,17 +36,23 @@ int mygetline(char s[], int lim) {
 
 // tabs and long lines without tabs or lines currently don't work
 void formatline(char s[], int beg) { // n - where we begin formating, current line
-	if (s[beg] == '\0')
-		return;
 	int i, j;
 	char c;
 	int lnw; // last non whitespace
+	int new; // new printable characters
+	new = 0;
 	lnw = beg;
-	for (i = beg; ((c = s[i]) != '\n') && i < DIV+beg; i++)
-		if (c != ' ' && c != '\t')
-			lnw = i;
-	for (i = beg; i <= lnw; i++)
-		putchar(s[i]);
-	putchar('\n');
-	formatline(s, lnw + 1);
+	while (s[beg] != '\n') {
+		for (i = beg; ((c = s[i]) != '\n') && i < DIV + beg; i++)
+			if (c != ' ')// && c != '\t')
+				lnw = i;
+			else
+				new++;
+		for (i = beg; i <= lnw; i++)
+			putchar(s[i]);
+		if(new) // if there were any new 'printable' characters
+			putchar('\n');
+		lnw++;
+		beg = lnw;
+	}
 }

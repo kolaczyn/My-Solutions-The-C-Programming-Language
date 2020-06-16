@@ -10,6 +10,7 @@ int main() {
 
 	while (mygetline(line, MAXLINE)) {
 		reverse(line);
+		printf(line);
 	}
 	getchar();
 }
@@ -32,12 +33,18 @@ int mygetline(char s[], int lim) {
 	return i;
 
 }
-// it doesn't actually reverse an array, but just prints to the output a reversed string
+
 void reverse(char s[]) {
 	int i;
-	for (i = 0; s[i] != '\n'; i++)
+	int end;
+	int mid;
+	int swap;
+	for (end= 0; s[end] != '\n'; end++) // we find the end
 		;
-	for (i--; i >= 0; i--)
-		putchar(s[i]);
-	putchar('\n');
+	mid = end / 2;
+	for (i = 0; i < mid; i++) {
+		swap = s[i];
+		s[i] = s[end - i-1];
+		s[end - i-1] = swap;
+	}
 }

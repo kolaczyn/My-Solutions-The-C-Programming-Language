@@ -2,27 +2,30 @@
 
 #define MAX 21// just enough for the biggest 64 bit value + '\0'
 
-void itoa(int n, char s[]);
+void itob(int n, char s[], int b);
 void reverse(char s[]);
 
 int main() {
-	int n = -314;
+	int n = 43981;
 	char s[MAX];
-	itoa(n, s);
+	itob(n, s, 16);
 	printf(s);
 	getchar();
 }
 
-// TODO
-void itoa(int n, char s[]) {
+void itob(int n, char s[], int b) {
 	int i, sign;
+	int rem;
 
 	if ((sign = n) < 0)
 		n = -n;
 	i = 0;
 	do {
-		s[i++] = n % 10 + '0';
-	} while ((n /= 10) > 0);
+		if ((rem = n % b) >= 0 && rem <= 9)
+			s[i++] = rem + '0';
+		else
+			s[i++] = rem -10 + 'A';
+	} while ((n /= b) > 0);
 	if (sign < 0)
 		s[i++] = '-';
 	s[i] = '\0';
