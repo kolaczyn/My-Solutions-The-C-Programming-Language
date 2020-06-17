@@ -9,10 +9,11 @@ char pattern[] = "ould";
 int main() {
 	char line[MAXLINE];
 	int found = 0;
+	int index;
 
 	while (getline(line, MAXLINE) > 0)
-		if (strindex(line, pattern) >= 0) {
-			printf("%s", line);
+		if ((index=strrindex(line, pattern)) >= 0) {
+			printf("%s%d\n", line, index);
 			found++;
 		}
 		return found;
@@ -40,4 +41,17 @@ int strindex(char s[], char t[]) {
 			return i;
 	}
 	return -1;
+}
+
+int strrindex(char s[], char t[]) {
+	int i, j, k;
+	int last;
+	last = -1;
+	for (i = 0; s[i] != '\0'; i++) {
+		for (j = i, k = 0; t[k] != '\0' && s[j] == t[k]; j++, k++)
+			;
+		if (k > 0 && t[k] == '\0')
+			last = i;
+	}
+	return last;
 }

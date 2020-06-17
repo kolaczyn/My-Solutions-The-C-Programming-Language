@@ -14,23 +14,52 @@ int main() {
 }
 
 double atof(char s[]) {
-	double val, power;
-	int i, sign;
-
+	double val;
+	int power1; // power because of '.'
+	int power2; // power because of 'e'
+	int power; // power1+power2
+	int i;
+	int sign1, sign2; // sign1 - before e. sign2 - after e
+	int e; // is e positive or negative
+	e = 0;
 	for (i = 0; isspace(s[i]); i++)
 		;
-	sign = (s[i] == '-') ? -1 : 1;
+	sign1 = (s[i] == '-') ? -1 : 1;
 	if (s[i] == '+' || s[i] == '-')
 		i++;
 	for (val = 0.0; isdigit(s[i]); i++)
 		val = 10.0 * val + (s[i] - '0');
 	if (s[i] == '.')
 		i++;
-	for (power = 1.0; isdigit(s[i]); i++) {
+	for (power1 = 0; isdigit(s[i]); i++) {
 		val = 10.0 * val + (s[i] - '0');
-		power *= 10;
+		power1--;
 	}
-	return sign * val / power;
+	if (s[i] == 'e' || s[i] == 'E') {
+		i++;
+		if (s[i] == '-') {
+			sign2 = -1;
+			i++;
+		}
+		else if (s[i] == '+') {
+			sign2 = 1;
+			i++;
+		}
+		else
+			sign2 = 1;
+		for (power2 = 0; isdigit(s[i]); i++)
+			power2 = 10 * power2 + (s[i] - '0');
+		power2 *= sign2;
+	}
+	else
+		power2 = 0;
+	if ((power = power1 + power2) > 0)
+		for (i = 0; i < power; i++)
+			val *= 10;
+	else
+		for (i = 0; i < -power; i++)
+			val /= 10;
+	return sign1 * val;
 }
 
 int getline(char s[], int lim) {
