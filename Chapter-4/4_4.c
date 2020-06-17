@@ -10,7 +10,6 @@ double pop(void);
 
 int main() {
 	int type;
-	double op1;
 	double op2;
 	char s[MAXOP];
 
@@ -35,16 +34,6 @@ int main() {
 				push(pop() / op2);
 			else
 				printf("error: zero divisor\n");
-			break;
-		case '%':
-			op2 = pop();
-			op1 = pop();
-			if (!((int)op2 - op2) && !((int)op1 - op1))
-				push((int)op1 % (int)op2);
-			else {
-				printf("error: modul on non integer\n");
-				push(0);
-			}
 			break;
 		case '\n':
 			printf("\t%.8g\n", pop());
@@ -88,13 +77,9 @@ int getop(char s[]) {
 	while ((s[0] = c = getch()) == ' ' || c == '\t')
 		;
 	s[1] = '\0'; // why are we doing this?
-	if (!isdigit(c) && c != '.' && c!='-')
+	if (!isdigit(c) && c != '.')
 		return c;
 	i = 0;
-	if (c == '-') {
-		if ((!isdigit(s[++i] = c = getch())))// you have to press enter twice if you want to subtract
-			return '-';
-	}
 	if (isdigit(c))
 		while (isdigit(s[++i] = c = getch()))
 			;
@@ -104,7 +89,6 @@ int getop(char s[]) {
 	s[i] = '\0';
 	if (c != EOF)
 		ungetch(c);
-	//printf("\n---\n%s\n---\n", s);
 	return NUMBER;
 }
 
