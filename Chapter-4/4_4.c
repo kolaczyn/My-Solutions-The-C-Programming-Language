@@ -67,6 +67,37 @@ double pop(void) {
 	}
 }
 
+void print_top() {
+	if (sp > 0)
+		printf("Top of the stack: %f\n", val[sp]);
+	else
+		printf("error: stack empty\n");
+}
+
+void dup_top() {
+	if (sp > 0)
+		push(val[sp]);
+	else
+		printf("error: stack empty\n");
+}
+
+void swp_top() {
+	if (sp > 1) {
+		double first;
+		double second;
+		first = pop();
+		second = pop();
+		push(second);
+		push(first);
+	}
+	else
+		printf("eror: too few elements on the stack");
+}
+
+void rm_stack() {
+	sp = 0;
+}
+
 #include <ctype.h>
 int getch(void);
 void ungetch(int c);
