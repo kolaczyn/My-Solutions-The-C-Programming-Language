@@ -31,3 +31,33 @@ My solutions to the excercises in the book 'The C Programming Language'
 
 * [2.1](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-2/2_1.c) TODO
 * [2.2](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-2/2_2.c)
+* [2.3](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-2/2_3.c)
+* [2.4](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-2/2_4.c)
+* [2.5](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-2/2_5.c)
+* [2.10](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-2/2_10.c)
+
+# Chapter 3
+
+* [3.1](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-3/3_1.c)
+* [3.2_1](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-3/3_2_1.c)
+* [3.2_2](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-3/3_2_2.c)
+* [3.4](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-3/3_4.c)
+* [3.5](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-3/3_5.c)
+* [3.6](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-3/3_6.c)
+
+# Chapter 4
+
+* [4.1](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-4/4_1.c)
+* [4.2](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-4/4_2.c)
+* [4.3](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-4/4_3.c)
+* [4.4](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-4/4_4.c)
+
+# Chapter 5
+
+* [5.1](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-5/5_3.c)
+* [5.4](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-5/5_4.c)
+* [5.5](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-5/5_5.c)
+* [5.7](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-5/5_7.c)
+* [5.8](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-5/5_8.c)
+* [5.9](https://github.com/kolaczyn/My-Solutions-The-C-Programming-Language/blob/master/Chapter-5/5_9.c)
+
